@@ -12,9 +12,13 @@ for (let i=0  ; i<b.length;i++){
 return d;
 }
 function crearLista(d){
-    for(let j=0; j<d.length;j++){
-     document.querySelector("ul").innerHTML= `<li> ${d[j]} </li>`;
-    }
-}
+    const listaPalabras= document.getElementById("lista");
+    d.forEach(element => {
+        const li= document.createElement("li");
+        li.textContent=element;
+        listaPalabras.appendChild(li);    
+   
+    });
+};
 devolverValores(a,b);
 crearLista(d);
